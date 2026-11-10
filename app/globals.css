@@ -8396,3 +8396,57 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; }
 }
 .idcard__photo img { transition: transform 0.5s var(--ease-out); }
 .idcard__photo:hover img { transform: scale(1.04); }
+
+/* ── 65. OneView mobile fix + colorful tiles ── */
+@media (max-width: 1279px) {
+  .db-wrap { display: block; }
+  .db-wrap .db-col { margin-bottom: 0.6rem; }
+}
+@media (max-width: 560px) {
+  .db-profile { grid-template-columns: 1fr; }
+  .db-profile__photo { width: 122px; }
+}
+@media (max-width: 640px) {
+  .db-panel { padding: 0.55rem 0.6rem; }
+}
+.db-panel { background: linear-gradient(180deg, rgba(139,124,246,0.05), var(--dm-panel) 32%); }
+.db-cap__card { background: linear-gradient(165deg, rgba(139,124,246,0.10), rgba(34,211,238,0.04) 45%, rgba(255,255,255,0.02)); border-top: 2px solid var(--dm-acc); }
+.db-cap__card:nth-child(3n+2) { background: linear-gradient(165deg, rgba(34,211,238,0.10), rgba(251,191,36,0.05) 50%, rgba(255,255,255,0.02)); border-top-color: #22d3ee; }
+.db-cap__card:nth-child(3n+3) { background: linear-gradient(165deg, rgba(251,191,36,0.10), rgba(139,124,246,0.06) 55%, rgba(255,255,255,0.02)); border-top-color: #fbbf24; }
+.principle { background: linear-gradient(160deg, rgba(139,124,246,0.08), rgba(255,255,255,0.02)); border-top: 2px solid var(--accent); }
+.principle:nth-child(2) { border-top-color: #22d3ee; background: linear-gradient(160deg, rgba(34,211,238,0.08), rgba(255,255,255,0.02)); }
+.principle:nth-child(3) { border-top-color: #fbbf24; background: linear-gradient(160deg, rgba(251,191,36,0.08), rgba(255,255,255,0.02)); }
+.pcard { border-top: 2px solid var(--accent-a40); background: linear-gradient(180deg, rgba(139,124,246,0.05), var(--card-glass)); }
+.pcard:nth-child(even) { border-top-color: #22d3ee; }
+
+/* ── 66. Footer mobile ── */
+@media (max-width: 640px) {
+  .footer__row { flex-direction: column; align-items: center; text-align: center; gap: 0.9rem; }
+  .footer__links { justify-content: center; flex-wrap: wrap; }
+}
+
+/* ── 67. Profile stacks through tablet ── */
+@media (max-width: 900px) {
+  .db-profile { grid-template-columns: 1fr; }
+  .db-profile__photo { width: 132px; }
+}
+
+/* ── 68. OneView mobile polish ── */
+@media (max-width: 640px) {
+  .dashboard--embedded { padding: 4.75rem 0.85rem 1rem; }
+  .db-label { font-size: 0.62rem; }
+  .db-profile__name { font-size: 1.05rem; }
+  .db-profile__role, .db-profile__meta { font-size: 0.66rem; }
+  .db-status { font-size: 0.7rem; }
+  .db-status__row { grid-template-columns: 1fr; gap: 0.15rem; padding: 0.38rem 0; }
+  .db-status__v { text-align: left; font-weight: 600; color: var(--dm-ink); }
+  .db-panel { border-radius: 12px; }
+  .db-cap--wide .db-cap__card { padding: 0.6rem 0.65rem; }
+}
+
+/* ── 69. OneView hard single-column on small screens ── */
+@media (max-width: 900px) {
+  .db-wrap { display: block !important; }
+  .db-col { margin-bottom: 0.7rem !important; }
+  .db-cap--wide { grid-template-columns: 1fr !important; }
+}
