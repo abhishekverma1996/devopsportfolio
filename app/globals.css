@@ -8463,3 +8463,20 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; }
 .termcard2__body { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.5; }
 .termcard2__body p { margin: 0; }
 @media (max-width: 900px) { .contact__grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+/* ── 72. OneView dark theme support ── */
+[data-theme="dark"] .dashboard {
+  --dm-bg: #0b0d14;
+  --dm-panel: rgba(18,20,32,0.72);
+  --dm-line: rgba(255,255,255,0.12);
+  --dm-ink: #eef0fa;
+  --dm-muted: #a6a9c0;
+  --dm-faint: #8a8faa;
+  --dm-acc: #aba0ff;
+  --dm-acc2: #8b7cf6;
+}
+[data-theme="dark"] .db-health { background: rgba(255,255,255,0.05); border-color: var(--dm-line); }
+[data-theme="dark"] .termcard,
+[data-theme="dark"] .termcard2 { background: linear-gradient(180deg, rgba(139,124,246,0.08), rgba(18,20,32,0.6)); }
+[data-theme="dark"] .termcard__bar,
+[data-theme="dark"] .termcard2__bar { background: rgba(255,255,255,0.04); }
