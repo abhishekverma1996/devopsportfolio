@@ -8480,3 +8480,33 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; }
 [data-theme="dark"] .termcard2 { background: linear-gradient(180deg, rgba(139,124,246,0.08), rgba(18,20,32,0.6)); }
 [data-theme="dark"] .termcard__bar,
 [data-theme="dark"] .termcard2__bar { background: rgba(255,255,255,0.04); }
+
+/* ── 75. OneView System Status finalized + panel polish ── */
+.db-status { display: flex; flex-direction: column; }
+.db-status__row {
+  display: grid !important;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) !important;
+  align-items: baseline !important;
+  column-gap: 0.8rem !important;
+  padding: 0.44rem 0 !important;
+  border-bottom: 1px solid var(--dm-line) !important;
+  flex-wrap: nowrap !important;
+}
+.db-status__row:last-child { border-bottom: 0 !important; }
+.db-status__k {
+  font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--dm-faint);
+  white-space: nowrap; text-align: left;
+}
+.db-status__v {
+  font-weight: 600; font-size: 0.8rem; color: var(--dm-ink);
+  text-align: right; word-break: break-word; overflow-wrap: anywhere;
+  min-width: 0;
+}
+.db-panel {
+  overflow: hidden;
+  background: color-mix(in srgb, var(--dm-panel) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--dm-line);
+  box-shadow: 0 10px 30px rgba(30,20,60,0.06);
+}
