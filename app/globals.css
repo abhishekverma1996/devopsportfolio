@@ -8450,3 +8450,13 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; }
   .db-col { margin-bottom: 0.7rem !important; }
   .db-cap--wide { grid-template-columns: 1fr !important; }
 }
+
+/* ── 71. Contact split panel ── */
+.contact__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start; margin-top: 2.2rem; }
+.contact__left { display: flex; flex-direction: column; gap: 1.1rem; }
+.termcard2 { border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(180deg, rgba(139,124,246,0.07), var(--card-glass)); box-shadow: 0 24px 60px rgba(20,16,40,0.12); overflow: hidden; }
+.termcard2__bar { display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 0.8rem; border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.35); }
+.termcard2__title { font-family: var(--font-mono); font-size: 0.62rem; color: var(--ink-muted); }
+.termcard2__body { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.5; }
+.termcard2__body p { margin: 0; }
+@media (max-width: 900px) { .contact__grid { grid-template-columns: 1fr; gap: 1.5rem; } }
