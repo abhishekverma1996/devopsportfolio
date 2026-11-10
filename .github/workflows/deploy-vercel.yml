@@ -1,0 +1,43 @@
+# Deploy to Vercel on push to main.
+# Setup (one-time):
+#   1. In GitHub repo settings → Secrets and variables → Actions:
+#      - Repository secrets: VERCEL_TOKEN (from https://vercel.com/account/tokens)
+#      - Repository variables: DEPLOY_VERCEL = true
+#   2. (Optional) Link project locally once: npx vercel link  → stores org/project ids
+#   3. Push to main. The deploy job runs only when DEPLOY_VERCEL is true.
+name: deploy-vercel
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Type-check + production build
+        run: npm run build
+      - name: Artifact sanity
+        run: |
+          test -d .next
+          test -d public/req
+          test -f public/req/pdf/Resume_AbhishekVerma.pdf
+
+  deploy:
+    if: vars.DEPLOY_VERCEL == 'true'
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Vercel CLI
+        run: npm install --global vercel
+      - name: Deploy to Vercel (production)
+        run: vercel deploy --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
