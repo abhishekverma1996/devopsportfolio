@@ -8376,17 +8376,15 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; }
 
 /* ── 63. DevOps cursor icon (>_) ── */
 .cursor__dot {
-  width: auto; height: auto;
-  padding: 3px 7px;
-  background: linear-gradient(140deg, var(--accent-bright), var(--accent-deep));
-  border-radius: 8px;
-  box-shadow: 0 0 14px var(--accent-a40);
+  width: 18px; height: 20px;
+  padding: 0;
+  background: var(--accent);
+  border-radius: 0;
+  box-shadow: 0 0 10px var(--accent-a40);
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20"><path d="M3 1v17l5-5 3 5 4-2.5-4-5.5h4z"/></svg>') no-repeat center / contain;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20"><path d="M3 1v17l5-5 3 5 4-2.5-4-5.5h4z"/></svg>') no-repeat center / contain;
 }
-.cursor__dot::before {
-  content: ">_";
-  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
-  color: var(--accent-ink); letter-spacing: -0.04em;
-}
+.cursor__dot::before { content: none; }
 
 /* ── 64. Photo gradient ring + hover zoom ── */
 .idcard__photo {
