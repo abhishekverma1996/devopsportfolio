@@ -8376,13 +8376,13 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; }
 
 /* ── 63. DevOps cursor icon (>_) ── */
 .cursor__dot {
-  width: 18px; height: 20px;
+  width: 18px; height: 21px;
   padding: 0;
   background: var(--accent);
   border-radius: 0;
   box-shadow: 0 0 10px var(--accent-a40);
-  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20"><path d="M3 1v17l5-5 3 5 4-2.5-4-5.5h4z"/></svg>') no-repeat center / contain;
-  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20"><path d="M3 1v17l5-5 3 5 4-2.5-4-5.5h4z"/></svg>') no-repeat center / contain;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5.5.5a.5.5 0 0 1 .5.5v12.2l3.5-3.6a.5.5 0 0 1 .71 0l.71.71a.5.5 0 0 1 0 .71L5.8 16.9a.7.7 0 0 1-1.1 0L.37 13.5a.5.5 0 0 1 0-.71l.71-.71a.5.5 0 0 1 .7 0l3.4 3.5V1A.5.5 0 0 1 5.5.5z"/></svg>') no-repeat center / contain;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5.5.5a.5.5 0 0 1 .5.5v12.2l3.5-3.6a.5.5 0 0 1 .71 0l.71.71a.5.5 0 0 1 0 .71L5.8 16.9a.7.7 0 0 1-1.1 0L.37 13.5a.5.5 0 0 1 0-.71l.71-.71a.5.5 0 0 1 .7 0l3.4 3.5V1A.5.5 0 0 1 5.5.5z"/></svg>') no-repeat center / contain;
 }
 .cursor__dot::before { content: none; }
 
