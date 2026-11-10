@@ -38,12 +38,12 @@
   function spawn(x, y) {
     for (var i = 0; i < 2; i++) {
       var ang = Math.random() * Math.PI * 2;
-      var sp = 0.6 + Math.random() * 1.8;
+      var sp = 0.8 + Math.random() * 2.2;
       parts.push({
         x: x, y: y,
         vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp,
-        life: 0, max: 12 + Math.floor(Math.random() * 8),
-        r: 1.5 + Math.random() * 2.2
+        life: 0, max: 14 + Math.floor(Math.random() * 8),
+        r: 2 + Math.random() * 2.6
       });
     }
   }
@@ -54,10 +54,19 @@
       p.x += p.vx; p.y += p.vy; p.life++;
       if (p.life >= p.max) { parts.splice(i, 1); continue; }
       var k = 1 - p.life / p.max;
-      tctx.globalAlpha = 0.15 + 0.75 * k;
+      var rad = p.r * k + 0.6;
+      // dark outline so sparks read on light backgrounds too
+      tctx.globalAlpha = 0.45 * k;
       tctx.beginPath();
-      tctx.arc(p.x, p.y, p.r * k + 0.4, 0, 6.2832);
-      tctx.fillStyle = 'rgba(56,189,248,1)';
+      tctx.arc(p.x, p.y, rad + 1.2, 0, 6.2832);
+      tctx.strokeStyle = 'rgba(12,10,28,0.5)';
+      tctx.lineWidth = 1.4;
+      tctx.stroke();
+      // bright core
+      tctx.globalAlpha = 0.25 + 0.75 * k;
+      tctx.beginPath();
+      tctx.arc(p.x, p.y, rad, 0, 6.2832);
+      tctx.fillStyle = 'rgba(171,160,255,1)';
       tctx.fill();
     }
     tctx.globalAlpha = 1;
