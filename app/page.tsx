@@ -11,17 +11,11 @@ export default function Home() {
         <Hero />
         <Marquee />
         <About />
-        <Marquee />
         <Work />
-        <Marquee />
         <Projects />
-        <Marquee />
         <Stack />
-        <Marquee />
         <Credentials />
-        <Marquee />
         <Runbooks />
-        <Marquee />
         <Contact />
         <Marquee />
         <OneViewPanel />
