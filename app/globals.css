@@ -24957,3 +24957,18 @@ article:focus-visible,
   padding: 0.25rem 0.6rem !important;
   border-radius: 999px !important;
 }
+
+/* ── 83. System Status alignment: stable cols + mobile stack ── */
+#oneview .db-status__row {
+  grid-template-columns: minmax(0, 42%) minmax(0, 58%) !important;
+}
+#oneview .db-status__k { text-align: left !important; }
+#oneview .db-status__v { text-align: right !important; }
+@media (max-width: 640px) {
+  #oneview .db-status__row { grid-template-columns: 1fr !important; row-gap: 0.18rem !important; }
+  #oneview .db-status__v { text-align: left !important; }
+}
+
+/* ── 84. System Status: stretch rows to panel width ── */
+#oneview .db-status { align-items: stretch !important; }
+#oneview .db-status__row { width: 100% !important; }
