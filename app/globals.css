@@ -24923,3 +24923,37 @@ article:focus-visible,
   max-width: calc(100vw - 2rem);
   padding-inline: 0.85rem;
 }
+
+/* ── 84. Remove unwanted circle/oval behind System Status ── */
+
+/* ── 82. Fix: remove badge oval from System Status container ── */
+#oneview .db-status {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-family: inherit !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: inherit !important;
+  gap: 0 !important;
+}
+/* keep badge pill ONLY for the profile status chip */
+#oneview .db-profile .db-status {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  width: fit-content !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.55rem !important;
+  letter-spacing: 0.07em !important;
+  text-transform: uppercase !important;
+  color: var(--dm-acc) !important;
+  border: 1px solid rgba(91, 71, 216, 0.25) !important;
+  background: rgba(91, 71, 216, 0.08) !important;
+  padding: 0.25rem 0.6rem !important;
+  border-radius: 999px !important;
+}
