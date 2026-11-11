@@ -100,6 +100,7 @@ export function Hero() {
             <p className="lead hero__lead">
               I turn cloud &amp; delivery ops into
               <span className="em">automated pipelines</span> that let teams ship faster, safer, and at scale.
+              <span className="lead__sub">Currently building release automation at Softbeads — 99.9% uptime, 25% faster fixes.</span>
             </p>
 
             <div className="hero__actions">
@@ -129,6 +130,10 @@ export function Hero() {
               <div className="stat">
                 <span className="stat__k">local</span>
                 <span className="stat__v tnum" data-clock>00:00:00</span>
+              </div>
+              <div className="stat">
+                <span className="stat__k">gh</span>
+                <a className="stat__v stat__link" href="https://github.com/abhishekverma1996" target="_blank" rel="noopener" data-cursor="open">github.com/abhishekverma1996</a>
               </div>
             </div>
           </div>
