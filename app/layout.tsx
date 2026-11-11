@@ -9,6 +9,7 @@ import Behaviors from './behaviors';
 import Header from '@/components/HeaderClient';
 import { Footer } from '@/components/sections2';
 import ProgressBar from '@/components/ProgressBar';
+import ScrollFab from '@/components/ScrollFab';
 
 const themeBootScript = `(function(){var t=null;try{t=localStorage.getItem('theme');}catch(e){}if(t!=='light'&&t!=='dark')t='light';document.documentElement.setAttribute('data-theme',t);})();`;
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <Header />
         <ProgressBar />
+        <ScrollFab />
         {children}
         <Footer />
         <Script
