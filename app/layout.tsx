@@ -18,7 +18,24 @@ export const metadata: Metadata = {
   description:
     'DevOps Engineer specializing in Azure DevOps, CI/CD pipelines, Microsoft Azure cloud infrastructure, Kubernetes, Terraform, and site reliability engineering.',
   authors: [{ name: 'Abhishek Verma' }],
+  keywords: ['DevOps', 'Azure DevOps', 'CI/CD', 'Kubernetes', 'Terraform', 'Site Reliability', 'Infrastructure as Code', 'Abhishek Verma'],
   icons: { icon: '/req/img/fav/favicon.svg' },
+  metadataBase: new URL('https://abhishekvermaportfolio.vercel.app'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: '/',
+    siteName: 'Abhishek Verma — DevOps Engineer',
+    title: 'Abhishek Verma | DevOps Engineer — Azure, CI/CD & Cloud Infrastructure',
+    description: 'Azure DevOps, CI/CD, Kubernetes, Terraform, and SRE — 7+ years making release day a non-event.',
+    images: [{ url: '/req/img/og-card.png', width: 1200, height: 630, alt: 'Abhishek Verma — DevOps Engineer' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Abhishek Verma | DevOps Engineer',
+    description: 'Azure DevOps, CI/CD, Kubernetes, Terraform, and SRE.',
+    images: ['/req/img/og-card.png'],
+  },
 };
 
 export const viewport: Viewport = {

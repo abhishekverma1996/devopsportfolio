@@ -122,7 +122,7 @@
   --ink: #12101f;
   --ink-soft: #2e2a44;
   --ink-muted: #4b4664;
-  --ink-faint: #6f698a;
+  --ink-faint: #5f5979;
 
   --line: rgba(14, 22, 36, 0.13);
   --line-soft: rgba(14, 22, 36, 0.08);
@@ -6101,7 +6101,7 @@ h3 {
   --ink: #12101f;
   --ink-soft: #2e2a44;
   --ink-muted: #4b4664;
-  --ink-faint: #6f698a;
+  --ink-faint: #5f5979;
 
   --line: rgba(14, 22, 36, 0.13);
   --line-soft: rgba(14, 22, 36, 0.08);
@@ -12259,7 +12259,7 @@ h3 {
   --ink: #12101f;
   --ink-soft: #2e2a44;
   --ink-muted: #4b4664;
-  --ink-faint: #6f698a;
+  --ink-faint: #5f5979;
 
   --line: rgba(14, 22, 36, 0.13);
   --line-soft: rgba(14, 22, 36, 0.08);
@@ -18238,7 +18238,7 @@ h3 {
   --ink: #12101f;
   --ink-soft: #2e2a44;
   --ink-muted: #4b4664;
-  --ink-faint: #6f698a;
+  --ink-faint: #5f5979;
 
   --line: rgba(14, 22, 36, 0.13);
   --line-soft: rgba(14, 22, 36, 0.08);
@@ -24988,3 +24988,8 @@ article:focus-visible,
 .scrollfab svg { width: 20px; height: 20px; }
 @media (max-width: 640px) { .scrollfab { width: 42px; height: 42px; right: 0.85rem; bottom: 0.85rem; } }
 @media (prefers-reduced-motion: reduce) { .scrollfab svg { transition: none; } }
+
+/* ── 86. Lighthouse: terminal text contrast ── */
+.db-term__title { color: #d6dae8 !important; }
+.db-term__body .ln { color: #c3c8dc !important; }
+.db-term__body .ln.ok { color: #7ee2a8 !important; }

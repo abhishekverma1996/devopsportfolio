@@ -262,7 +262,6 @@ export default function OneViewPanel() {
                   className="db-cap__card"
                   role="button"
                   tabIndex={0}
-                  aria-label={`Open ${c.name} details`}
                   onClick={() => open(c)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -308,7 +307,7 @@ export default function OneViewPanel() {
                 {PROJECTS.slice(0, 2).map((p) => (
                   <article key={p.title} className="db-mission">
                     <span className="db-mission__impact">Impact · High</span>
-                    <h3 className="db-mission__title">{p.title}</h3>
+                    <h2 className="db-mission__title">{p.title}</h2>
                     <p className="db-mission__desc">{p.desc}</p>
                   </article>
                 ))}

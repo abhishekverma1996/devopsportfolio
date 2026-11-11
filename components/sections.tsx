@@ -49,7 +49,7 @@ export function Header() {
   return (
     <header className="site-header" id="siteHeader">
       <nav className="nav" id="nav" aria-label="Primary">
-        <a className="brand" href="/" aria-label="Abhishek Verma — home">
+        <a className="brand" href="/" aria-label="AV Abhishek Verma — DevOps Engineer">
           <span className="brand__mark">AV</span>
           <span className="brand__name">Abhishek&nbsp;Verma <span className="role">— DevOps Engineer</span></span>
         </a>
