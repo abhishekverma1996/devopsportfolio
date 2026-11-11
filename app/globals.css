@@ -8527,3 +8527,44 @@ a:focus-visible, button:focus-visible, article:focus-visible, [tabindex]:focus-v
 
 /* ── 78. Hero lead sub-line ── */
 .lead__sub { display: block; margin-top: 0.75rem; font-size: 0.92em; color: var(--ink-muted); }
+
+/* ── 79. Nav never clips on laptop widths ── */
+.site-header.is-scrolled .nav { max-width: min(900px, calc(100vw - 1.6rem)); }
+.nav__cta { white-space: nowrap; flex-shrink: 0; }
+.nav__links { min-width: 0; }
+.nav__right { flex-shrink: 0; }
+@media (max-width: 1200px) {
+  .nav { gap: 0.7rem; padding-left: 1rem; }
+  .brand__name .role { display: none; }
+  .nav__link { padding: 0.5rem 0.6rem; font-size: 0.82rem; }
+}
+@media (max-width: 1040px) {
+  .nav__status { display: none; }
+  .nav__right { gap: 0.45rem; }
+}
+
+/* perf: lighter blur */
+.site-header.is-scrolled .nav { -webkit-backdrop-filter: blur(10px) saturate(140%); backdrop-filter: blur(10px) saturate(140%); }
+.db-panel { -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+
+/* ── 80. Nav no-overlap fix (links stay inside) ── */
+.nav__links { min-width: 0; }
+@media (max-width: 1400px) {
+  .nav { gap: 0.5rem; }
+  .nav__link { padding: 0.48rem 0.55rem; font-size: 0.8rem; }
+  .nav__right { gap: 0.5rem; }
+  .nav__status { padding: 0.4rem 0.55rem; max-width: 170px; font-size: 0.64rem; }
+}
+@media (max-width: 1180px) {
+  .nav__link { padding: 0.48rem 0.42rem; font-size: 0.78rem; }
+  .brand__mark { width: 30px; height: 30px; }
+  .nav__cta { padding: 0.55rem 0.85rem; }
+}
+
+/* ── 81. Nav 1440 tight ── */
+@media (max-width: 1440px) and (min-width: 1401px) {
+  .nav { gap: 0.6rem; }
+  .nav__link { padding: 0.48rem 0.62rem; font-size: 0.81rem; }
+  .brand__name { font-size: 0.88rem; }
+  .nav__status { padding: 0.4rem 0.6rem; max-width: 180px; }
+}

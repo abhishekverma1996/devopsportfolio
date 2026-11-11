@@ -26,7 +26,7 @@
   var tctx = cv.getContext('2d');
   var parts = [];
   var CW = innerWidth, CH = innerHeight;
-  var DPR = Math.min(window.devicePixelRatio || 1, 2);
+  var DPR = Math.min(window.devicePixelRatio || 1, 1.5);
   function tsize() {
     CW = innerWidth; CH = innerHeight;
     cv.width = Math.floor(CW * DPR); cv.height = Math.floor(CH * DPR);
@@ -36,13 +36,13 @@
   }
   addEventListener('resize', tsize); tsize();
   function spawn(x, y) {
-    for (var i = 0; i < 2; i++) {
+    for (var i = 0; i < 1; i++) {
       var ang = Math.random() * Math.PI * 2;
       var sp = 0.8 + Math.random() * 2.2;
       parts.push({
         x: x, y: y,
         vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp,
-        life: 0, max: 14 + Math.floor(Math.random() * 8),
+        life: 0, max: 10 + Math.floor(Math.random() * 6),
         r: 2 + Math.random() * 2.6
       });
     }
